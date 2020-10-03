@@ -28,27 +28,28 @@ a:hover {
 }
 .banner{
   padding: 250px 150px;
-  background-image: /*linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%), */
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 10%), 
   url("images/banniere_ta.png");
   background-size: cover;
   background-position: center;
-}
-.banner h1 {
-  font-size: 50px;
-}
-.banner p {
+  position: relative; /*position du parent*/ 
   opacity: 0.8;
   font-size: 30px;
   font-weight: lighter;
   margin-bottom: 40px;
 }
+.banner h1 {
+  font-size: 50px;
+}
 .button-ta {
   color: white;
   background: #6772e5;
   box-shadow: 0 4px 6px rgba(50,50,93,.11);
-  border-radius: 4px;
-  padding: 10px 15px 15px 15px;
-  position: 650px 0px 0px 0px;
+  border-radius: 10px;
+  position: absolute;/*position de l'enfant qui est absolue par rapport au parent*/
+  bottom: 50px; /* position par rapport au bas du parent*/
+  left: 50%; /* position par rapport à la gauche du parent*/
+  transform: translateX(-50%); /* translate le début de l'ancre sur l'axe horizontal*/
 }
 .button-ta:hover {
   background: #7795f8;
